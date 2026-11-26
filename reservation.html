@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservations | Amoral ZSR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="reservations">
+  <div id="header"></div>
+
+  <main>
+    <section class="page-banner">
+      <p class="eyebrow">YOUR TABLE AWAITS</p>
+      <h1>Reserve Your <span>Experience.</span></h1>
+      <p>Plan your next special dining moment with us.</p>
+    </section>
+
+    <section class="section form-section">
+      <form id="reservation-form" class="luxury-form">
+        <div class="form-grid">
+          <label>Full Name
+            <input name="name" required placeholder="Your name">
+          </label>
+
+          <label>Phone Number
+            <input name="phone" type="tel" required pattern="[0-9+() -]{8,18}" placeholder="Your phone number">
+          </label>
+
+          <label>Email Address
+            <input name="email" type="email" required placeholder="Your email">
+          </label>
+
+          <label>Number of Guests
+            <select name="guests" required>
+              <option value="">Select guests</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7+</option>
+            </select>
+          </label>
+
+          <label>Date
+            <input name="date" type="date" required>
+          </label>
+
+          <label>Preferred Time
+            <input name="time" type="time" required>
+          </label>
+        </div>
+
+        <label>Special Requests
+          <textarea name="message" rows="4" placeholder="Tell us if you have any special requests"></textarea>
+        </label>
+
+        <button class="btn btn-gold" type="submit">Send Reservation Request</button>
+        <p id="reservation-message" class="form-message" aria-live="polite"></p>
+        <p class="menu-note">Demo form only: this does not send a booking to the restaurant. A backend or booking service is needed for real reservations.</p>
+      </form>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script src="script.js"></script>
+</body>
+</html>
